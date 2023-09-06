@@ -15,7 +15,7 @@ app.post('/modulos', (req, res) => {
         console.error('Erro ao ler o arquivo key.txt:', err);
         res.status(500).send('Erro ao ler o arquivo key.txt');
       } else {
-        const textotxt = data; // Valor de textotxt disponível aqui
+        const textotxt = data.trim(); // Valor de textotxt disponível aqui
 
         // Recebe o comando da solicitação POST
         const comando = req.body.comando;
